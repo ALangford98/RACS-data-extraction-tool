@@ -1,9 +1,9 @@
 import openpyxl
 import pandas as pd
 
-ps = openpyxl.load_workbook('ANTHONY SMS 18 DEC IC&SM.xlsx')
-sheet = ps['sheet1']
-for row in range(1, 63 +1):
+ps = openpyxl.load_workbook('.xlsx') #Spreadsheet file containing raw data
+sheet = ps['sheet1'] #sheet to use while extracting data
+for row in range(1, 63 +1): #rows to consider for extraction
     surname = sheet['C' + str(row)].value
     arrears = str(sheet['D' + str(row)].value)
     installment = str(sheet['E' + str(row)].value)
